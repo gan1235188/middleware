@@ -1,0 +1,36 @@
+{
+  "name": "middleware",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.12.18",
+    "@types/webpack": "^4.4.23",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "tsc": "tsc",
+    "build": "webpack --config webpack.config.ts",
+    "tslint": "tslint ./src/**/*.ts",
+    "tslint:fix": "npm run tslint -- --fix"
+  },
+  "keywords": [
+    "middleware",
+    "js",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "sgan (gan1235188@163.com)",
+  "license": "ISC"
+}
