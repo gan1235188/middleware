@@ -20,6 +20,7 @@ httpMiddleware
         console.log("start a ajax request")
         return next(config)
     })
+    .use(showLoading())
     .use((config, next) => {
         config.url += '?_=' + Date.now()
         return next(config)
