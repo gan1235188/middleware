@@ -55,13 +55,19 @@ function addTestData(config, next) {
 }
 
 function showLoading(){
+    //至少显示300ms
+    let showLoadingTime = 300
     let times = 0
     let startTime = 0
 
-    return (config, next) => {
-        times++ && $(".loading").show()
+    return async (config, next) => {
+        $(".loading").show()
+        startTime = times++ > 0 ? startTime : Date.now()
+
         try{
-            const result = next(config)
+            const response = next(config)
+            await sleep(showLoadingTime + startTime - Date.now())
+            return response
         } catch(e) {
             if(--times <= 0){
                 $(".loading").hide()
@@ -71,6 +77,10 @@ function showLoading(){
             throw new Error(e)
         }
     }
+}
+
+function sleep(time) {
+    return new Promise(resolve => setTimeout(resolve, time))
 }
 
 ```
