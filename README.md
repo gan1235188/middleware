@@ -68,7 +68,7 @@ function showLoading(){
             const response = next(config)
             await sleep(showLoadingTime + startTime - Date.now())
             return response
-        } catch(e) {
+        } finally {
             if(--times <= 0){
                 $(".loading").hide()
                 times = 0
