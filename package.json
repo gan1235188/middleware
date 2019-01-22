@@ -1,8 +1,8 @@
 {
   "name": "s-middleware",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^23.3.12",
