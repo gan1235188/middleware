@@ -5,6 +5,7 @@ const config: webpack.Configuration = {
     mode: 'production',
     entry: './src/index.ts',
     output: {
+        libraryTarget: 'umd',
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js'
     },
